@@ -57,4 +57,17 @@ let score = 0;
 const vehicleImage = document.getElementById("vehicleImage");
 const answerSelect = document.getElementById("answer");
 const submitButton = document.getElementById("submitAnswer");
+const sectionGame = document.getElementById("game");
+const sectionResult = document.getElementById("result");
+const finalScore = document.getElementById("finalScore");
+const reward = document.getElementById("reward");
+const restarGame = document.getElementById("restarGame");
+
+function loadQuestion(){
+    if(currentQuestions < questions.length){
+        var question = questions[currentQuestions];
+        document.getElementById("vehicleImage").src= question.image
+    }
+    
+}
 
