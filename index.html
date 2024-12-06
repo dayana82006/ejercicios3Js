@@ -1,29 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar el Logo</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
-    <title>Document</title>
 </head>
+
 <body>
-    <div class="gameContainer">
-        <h1>What brand does this logo belong to?</h1>
-      --  <div id="game">
-            <img src="" id="vehicleImage" alt="Image vehicle">
-            <select name="" id="answer">
-                <option value="" disabled select> 
-                    Selecciona el nombre
-                </option>
+
+    <div class="game-container">
+        <h1>Adivina el Logo del Carro</h1>
+
+        <div id="logo-container">
+            <img id="logoImg" src="" alt="Logo">
+        </div>
+
+        <div>
+            <label for="car-names">Selecciona el nombre del carro:</label>
+            <hr>
+            <br>
+            <select id="car-names">
             </select>
-            <button id="submitAnswer">Enviar respuesta</button>
         </div>
-       -- <div id="result" class="hidden">
-       --     <h2 id="finalScore"></h2>
-         --   <div id="reward"></div>
-         --   <button id="restarGame">Jugar de nuevo</button>
+<br>
+        <button id="next-btn" onclick="nextQuestion()">Siguiente</button>
+
+        <div id="score">
+            <p>Puntos: <span id="score-text">0</span></p>
         </div>
+
     </div>
+
+    <div id="game-over" style="display: none;">
+        <h2>¡Juego Terminado!</h2>
+        <p id="final-message"></p>
+        <button onclick="restartGame()">Volver a Jugar</button>
+    </div>
+
+    <script src="app.js"></script>
 </body>
+
 </html>
